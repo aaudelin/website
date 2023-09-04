@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Aurélien Audelien | About me">
+    <section id="about">
+        <h1>Hello, my name is Aurélien Audelin 👋</h1>
+        <p class="subtitle">If you're not french chances are you won't be able to pronounce it... but that's ok, I'm not
+            even mad.</p>
+        <p>Thanks for landing on my website (I should have done it years ago, but who even cares)</p>
+        <p>Well, I suppose you already got that but I'm French, what you may not know is that I am a fullstack CTO.</p>
+        <p>Tech is the art I'm most found of, designing and coding amazing SaaS applications, scaling wonderful teams
+            and eventually experiencing user feedbacks.</p>
+        <p>I value true relationships, communities, transparency, leadership and freedom.</p>
+        <button></button>
+    </section>
+</Layout>
+
+<style>
+    button {
+        background-color: var(--color-primary);
+        color: var(--accent-lighter);
+    }
+
+    .subtitle {
+        color: var(--accent-lighter);
+        font-style: italic;
+    }
+
+    section {
+        max-width: 800px;
+    }
+</style>
