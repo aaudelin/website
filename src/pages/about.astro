@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import ScrollDownButton from "../components/ScrollDownButton.astro";
 ---
 
 <Layout title="Aurélien Audelien | About me">
@@ -19,15 +20,12 @@ import Layout from "../layouts/Layout.astro";
                 and eventually experiencing user feedbacks.</p>
             <p>I value true relationships, communities, transparency, leadership and freedom.</p>
         </div>
-        <button>My journey so far</button>
     </section>
+    <ScrollDownButton/>
 </Layout>
 
 <style>
-    button {
-        background-color: var(--color-primary);
-        color: var(--accent-lighter);
-    }
+
 
     .subtitle {
         color: var(--accent-lighter);
