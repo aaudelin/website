@@ -4,15 +4,22 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Aurélien Audelien | About me">
     <section id="about">
-        <h1>Hello, my name is Aurélien Audelin 👋</h1>
-        <p class="subtitle">If you're not french chances are you won't pronounce it well. But that's ok, I'm not
-            even mad...</p>
-        <p>Thanks for landing on my website (I should have done it years ago, but who even cares)</p>
-        <p>Well, you probably already figured that out but I'm French, what you may not know is that I am also a fullstack CTO.</p>
-        <p>Tech is the kind of art I'm most found of, designing and coding amazing SaaS applications, scaling wonderful teams
-            and eventually experiencing user feedbacks.</p>
-        <p>I value true relationships, communities, transparency, leadership and freedom.</p>
-        <button></button>
+        <div class="name">
+            <h1>Hello, my name is Aurélien Audelin</h1>
+            <p class="subtitle">Chances are you might not pronounce it well. But that's ok, I'm not
+                even mad...</p>
+        </div>
+        <div class="intro">
+            <p>Thanks for landing on my website (I truly hope you'll like it)</p>
+            <p>Well, you probably already figured that out but I'm French, what you may not know is that I am also a
+                fullstack CTO.</p>
+            <p>Tech is the kind of art I'm most found of, designing and coding amazing SaaS applications, scaling
+                wonderful
+                teams
+                and eventually experiencing user feedbacks.</p>
+            <p>I value true relationships, communities, transparency, leadership and freedom.</p>
+        </div>
+        <button>My journey so far</button>
     </section>
 </Layout>
 
@@ -25,9 +32,30 @@ import Layout from "../layouts/Layout.astro";
     .subtitle {
         color: var(--accent-lighter);
         font-style: italic;
+        font-size: 10px;
+        margin: 0;
+    }
+
+    .columns {
+        display: flex;
+        flex-direction: row;
     }
 
     section {
-        max-width: 800px;
+        max-width: 80vw;
+        height: 100vh;
+    }
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    .name {
+        margin-top: 20vh;
+
+    }
+
+    .intro {
+        margin-top: 10vh;
     }
 </style>
