@@ -6,7 +6,7 @@ import ScrollDownButton from "../components/ScrollDownButton.astro";
 <Layout title="Aurélien Audelien | About me">
     <section id="about">
         <div class="name">
-            <h1>Hello, my name is Aurélien Audelin</h1>
+            <h1>Hello, I am <span>Aurélien</span></h1>
             <p class="subtitle">Chances are you might not pronounce it well. But that's ok, I'm not
                 even mad...</p>
         </div>
@@ -46,6 +46,11 @@ import ScrollDownButton from "../components/ScrollDownButton.astro";
 
     h1 {
         margin-bottom: 0;
+
+        & span {
+            padding: 0 2px;
+            background: linear-gradient(180deg, transparent 0 90%, var(--color-primary) 0);
+        }
     }
 
     .name {
