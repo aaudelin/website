@@ -1,0 +1,35 @@
+---
+const {title, company, from, to} = Astro.props
+---
+
+<div class="main">
+    <div>
+        <h3>{company}</h3>
+        <div>{title} - from {from} until {to}</div>
+    </div>
+    <div class="separator">
+
+    </div>
+    <div>
+        <slot/>
+    </div>
+</div>
+
+<style>
+
+    .main {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+    }
+
+    .separator {
+        width: 1px;
+        background-color: var(--accent-dark);
+        margin: 0 5vw;
+    }
+
+    h3 {
+        margin: 0;
+    }
+</style>

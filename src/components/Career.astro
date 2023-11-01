@@ -1,27 +1,25 @@
 ---
----
+import CareerItem from "./CareerItem.astro";
 
+---
 <section id="career">
     <h2>What have I done...</h2>
-    <div class="main">
-        <div>
-            CTO Cleaq
-        </div>
-        <div>
-            Some stuff
-        </div>
-    </div>
+
+    <CareerItem title="CTO" company="Cleaq" from="2019" to="today">
+        <div>Software Engineer</div>
+    </CareerItem>
 </section>
 
 <style>
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     h2 {
         font-size: 2.5rem;
         margin-top: 5rem;
-    }
-
-    .main {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 2rem;
     }
 </style>
