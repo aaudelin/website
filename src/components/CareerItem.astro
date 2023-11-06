@@ -3,14 +3,14 @@ const {title, company, from, to} = Astro.props
 ---
 
 <div class="main">
-    <div>
-        <h3>{company}</h3>
-        <div>{title} - from {from} until {to}</div>
+    <div class="panel left-panel">
+        <div class="from">
+            {from}
+        </div>
+        <h3>{title} at {company}</h3>
     </div>
-    <div class="separator">
-
-    </div>
-    <div>
+    <div class="separator" />
+    <div class="panel right-panel">
         <slot/>
     </div>
 </div>
@@ -20,16 +20,39 @@ const {title, company, from, to} = Astro.props
     .main {
         display: flex;
         justify-content: space-between;
-        margin-top: 2rem;
+        margin: 2rem 10vw;
+        flex-wrap: wrap;
+    }
+
+    .from {
+        width: 100px;
+    }
+
+    .left-panel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .panel {
+        flex-grow: 1;
+        min-width: 400px;
+        flex-basis: 0;
     }
 
     .separator {
         width: 1px;
-        background-color: var(--accent-dark);
+        background-color: var(--color-primary);
         margin: 0 5vw;
     }
 
     h3 {
         margin: 0;
+    }
+
+    @media (max-width: 400px) {
+        .separator {
+            display: none;
+        }
     }
 </style>
