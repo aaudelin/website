@@ -1,11 +1,12 @@
 ---
+
 ---
 
 <div class="sidebar">
     <nav>
         <ul>
-            <li>1</li>
-            <li>2</li>
+            <li><a href="#about" class="active">Who am I</a></li>
+            <li><a href="#career">What have I done</a></li>
         </ul>
     </nav>
 </div>
@@ -13,18 +14,68 @@
 <style>
     .sidebar {
         height: 100vh;
-        padding: 20px;
+        padding: 0 20px;
         position: sticky;
         top: 0;
         display: flex;
         align-items: center;
+        min-width: 200px;
     }
+
+    nav {
+        //margin-top: 15vh;
+    }
+
     ul {
         padding: 0;
         margin: 0;
     }
+
     li {
         list-style: none;
         font-size: 20px;
+        margin: 10px 0;
+        cursor: pointer;
     }
+
+    a {
+        color: var(--accent-lighter);
+        position: relative;
+        text-decoration: none;
+    }
+
+    a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 20px;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: var(--accent-lighter);
+        transition: width 0.5s ease;
+    }
+
+    a.active::before {
+        width: 100%;
+        background-color: var(--color-primary);
+    }
+
+    a:hover::before {
+        width: 100%;
+    }
+
+
 </style>
+
+<script>
+    const linkTags = document.querySelectorAll("a");
+
+    linkTags.forEach((tag) => {
+        tag.addEventListener("click", () => {
+            document.querySelector(".active")?.classList?.remove("active")
+            tag.classList?.add("active")
+        });
+    });
+
+</script>
