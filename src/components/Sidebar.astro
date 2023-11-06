@@ -1,7 +1,8 @@
 ---
 
----
+import MenuIcon from "./MenuIcon.astro";---
 
+<MenuIcon />
 <div class="sidebar">
     <nav>
         <ul>
@@ -12,23 +13,26 @@
 </div>
 
 <style>
+
+
+    .wrapper {
+        position: sticky;
+    }
+
     .sidebar {
-        height: 100vh;
-        padding: 0 20px;
+        padding: 5vh 5vw;
         position: sticky;
         top: 0;
         display: flex;
-        align-items: center;
         min-width: 200px;
-    }
-
-    nav {
-        //margin-top: 15vh;
+        background-color: var(--accent-darker);
     }
 
     ul {
         padding: 0;
         margin: 0;
+        display: flex;
+        gap: 40px;
     }
 
     li {
@@ -65,6 +69,38 @@
         width: 100%;
     }
 
+
+    @media (max-width: 500px) {
+        nav:not(.active-nav) {
+            display: none;
+        }
+
+        a::before {
+            background-color: var(--accent-darker);
+        }
+
+        .sidebar {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 60px;
+            background-color: var(--accent-lighter);
+        }
+
+        nav {
+            padding-left: 10px;
+        }
+
+        ul {
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        a {
+            color: var(--accent-darker);
+        }
+    }
 
 </style>
 

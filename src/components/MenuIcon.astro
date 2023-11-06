@@ -1,0 +1,48 @@
+---
+---
+
+<div class="button-container">
+    <div class="button">
+        <div class="button-line"/>
+        <div class="button-line"/>
+        <div class="button-line"/>
+    </div>
+</div>
+
+<style>
+    .button-container {
+        display: none;
+        width: 100%;
+        position: sticky;
+        background-color: var(--accent-darker);
+        top: 0;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        justify-content: flex-end;
+    }
+
+    .button {
+        cursor: pointer;
+    }
+
+    .button-line {
+        width: 25px;
+        height: 3px;
+        background-color: var(--accent-lighter);
+        margin-top: 5px;
+    }
+
+    @media (max-width: 500px) {
+        .button-container {
+            display: flex;
+        }
+    }
+</style>
+
+<script>
+    const button = document.querySelector(".button")
+    button.addEventListener("click", () => {
+        document.querySelector("nav")?.classList?.toggle("active-nav")
+    });
+</script>
