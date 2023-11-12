@@ -1,19 +1,41 @@
 ---
 import CareerItem from "./CareerItem.astro";
-
+import Tags from "./Tags.astro";
 ---
 <section id="career">
     <h2>What have I done...</h2>
 
-    <CareerItem title="Architecte" company="Axione" from="2019" to="today">
-        <div>Software Engineer</div>
+    <CareerItem title="Architecte" company="Company" from="2019" to="today">
+        <div>Morbi nec ex vitae dui volutpat venenatis feugiat eu eros. Sed hendrerit, justo sit amet suscipit varius,
+            felis arcu egestas metus, non fermentum mauris enim sit amet quam. Sed in ante sit amet ex porta auctor.
+            Praesent euismod nibh erat, eu laoreet mauris ultricies vel. Ut at ultrices leo. Quisque mattis nisi purus,
+            vitae consequat nulla gravida id. Nulla eu fermentum elit, a elementum mi. Duis eu elementum orci, ut luctus
+            massa. Nunc at facilisis libero, ut dignissim felis. Cras ut orci commodo, ultricies mi ut, pharetra elit.
+            Nullam tellus sem, ultricies vel aliquam consectetur, bibendum quis nisl. Proin leo odio, interdum eu tempus
+            non, malesuada sed nisl. Duis mattis sed quam non fermentum. Cras feugiat sollicitudin magna, eget semper
+            nisl luctus a. Ut dolor purus, dapibus a rutrum eu, rhoncus in lacus. Etiam rutrum imperdiet purus a dictum.
+        </div>
+        <div>
+            <Tags labels={["Kotlin", "Typescript"]} />
+        </div>
+    </CareerItem>
+
+    <CareerItem title="Front dev" company="Company" from="2018" to="today">
+        <div>Morbi nec ex vitae dui volutpat venenatis feugiat eu eros. Sed hendrerit, justo sit amet suscipit varius,
+            felis arcu egestas metus, non fermentum mauris enim sit amet quam. Sed in ante sit amet ex porta auctor.
+            Praesent euismod nibh erat, eu laoreet mauris ultricies vel. Ut at ultrices leo. Quisque mattis nisi purus,
+            vitae consequat nulla gravida id. Nulla eu fermentum elit, a elementum mi. Duis eu elementum orci, ut luctus
+            massa. Nunc at facilisis libero, ut dignissim felis. Cras ut orci commodo, ultricies mi ut, pharetra elit.
+            Nullam tellus sem, ultricies vel aliquam consectetur, bibendum quis nisl. Proin leo odio, interdum eu tempus
+            non, malesuada sed nisl. Duis mattis sed quam non fermentum. Cras feugiat sollicitudin magna, eget semper
+            nisl luctus a. Ut dolor purus, dapibus a rutrum eu, rhoncus in lacus. Etiam rutrum imperdiet purus a dictum.
+        </div>
     </CareerItem>
 </section>
 
 <style>
     section {
         display: flex;
-        align-items: center;
         justify-content: center;
         flex-direction: column;
         margin-top: 3vh;
@@ -21,5 +43,16 @@ import CareerItem from "./CareerItem.astro";
 
     h2 {
         font-size: 2.5rem;
+        margin-left: 40vw;
+    }
+
+    @media (max-width: 900px) {
+        h2 {
+            margin-left: 0;
+        }
+        section {
+            align-items: center;
+        }
+
     }
 </style>

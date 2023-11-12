@@ -1,0 +1,27 @@
+---
+const {labels} = Astro.props;
+---
+
+<div class="tags">
+    {
+        labels.map(label => (<span>{label}</span>))
+    }
+</div>
+
+<style>
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 2vh;
+        gap: 10px;
+    }
+
+    span {
+        background-color: var(--color-primary);
+        color: var(--accent-lighter);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        text-transform: lowercase;
+        font-style: italic;
+    }
+</style>
