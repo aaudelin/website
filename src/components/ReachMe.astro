@@ -1,0 +1,66 @@
+---
+---
+
+<section id="reachMe">
+    <h2>How to reach me ?</h2>
+    <div class="subtitle">If you want</div>
+
+    <div class="contact">
+        <form class="column">
+            <label for="name">Your name or company name</label>
+            <input id="name" type="text" placeholder="Linus Torvald">
+
+            <label for="email">Your email</label>
+            <input id="email" type="email" placeholder="example@email.com">
+
+            <label for="message">Your message</label>
+            <textarea id="message" placeholder="Doing great !"></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+        <div class="column">
+            <a href="mailto:">Send me an email</a>
+            <a href="https://x.com">Find me on X</a>
+            <a href="https://linkedin.com">Find me on LinkedIn</a>
+            <a href="https://github.com">Find me on GitHub</a>
+        </div>
+    </div>
+
+</section>
+
+<style>
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin: 20vh 0 0 0;
+    }
+
+    .subtitle {
+        color: var(--accent-lighter);
+        font-style: italic;
+        font-size: 10px;
+        margin-bottom: 10vh;
+    }
+
+    .contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 10vw;
+        gap: 60px;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        min-width: 20vw;
+    }
+
+</style>
