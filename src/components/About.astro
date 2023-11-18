@@ -2,13 +2,13 @@
 ---
 
 <section id="about">
-    <div class="name">
-        <h1>Hello, I am <span>Aurélien</span></h1>
-        <p class="subtitle">Chances are you might not pronounce it well. But that's ok, I'm not
-            even mad...</p>
-    </div>
-    <div class="intro">
-        <div>
+    <div>
+        <div class="name">
+            <h1>Hello, I am <span>Aurélien</span></h1>
+            <p class="subtitle">Chances are you might not pronounce it well. But that's ok, I'm not
+                even mad...</p>
+        </div>
+        <div class="intro">
             <p>Thanks for landing on my website (I truly hope you'll like it)</p>
             <p>Well, you probably already figured that out but I'm French, what you may not know is that I am also a
                 fullstack CTO</p>
@@ -19,9 +19,17 @@
             <p>I value true relationships, communities, transparency, leadership and freedom</p>
         </div>
     </div>
+    <div class="image">
+        <img src="https://i.redd.it/ih6no69aj90y.png" alt="Profile Picture">
+    </div>
 </section>
 
 <style>
+
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
 
     .subtitle {
         color: var(--accent-lighter);
@@ -36,10 +44,13 @@
     }
 
     section {
-        min-height: 75vh;
-        margin-left: 5vw;
-        margin-right: 5vw;
-        padding-top: 10vh;
+        min-height: 70vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        gap: 10vw;
     }
 
     h1 {
@@ -54,7 +65,24 @@
 
     .intro {
         margin-top: 10vh;
-        display: flex;
         font-size: 18px;
+        max-width: 500px;
     }
+
+    img {
+        max-width: 320px;
+    }
+
+    @media (max-width: 1260px) {
+        img {
+            width: 30vw;
+        }
+    }
+
+    @media (max-width: 880px) {
+        img {
+            display: none;
+        }
+    }
+
 </style>
