@@ -1,32 +1,5 @@
 ---
-const errors = {name: "", email: "", message: ""};
-let showValidation = false;
 
-if (Astro.request.method === "POST") {
-    try {
-        const data = await Astro.request.formData();
-        console.log(data.get("name"));
-        const name = data.get("name");
-        const email = data.get("email");
-        const message = data.get("message");
-        if (typeof name !== "string" || name.length < 1) {
-            errors.name += "Please enter a name";
-        }
-        if (typeof message !== "string" || message.length < 1) {
-            errors.message += "Please enter a message";
-        }
-        if (typeof email !== "string" || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
-            errors.email += "Email is not valid";
-        }
-        const hasErrors = Object.values(errors).some(msg => msg)
-        if (!hasErrors) {
-
-        }
-    } catch (error) {
-        console.error(error.message);
-
-    }
-}
 ---
 
 <section id="reachMe">
@@ -60,7 +33,6 @@ if (Astro.request.method === "POST") {
                 signups */
                 <input type="text" name="b_faf36037b68480d4074cafe92_4a66e44c98" tabindex="-1" value="">
             </div>
-
 
             <button type="submit">Send</button>
         </form>
