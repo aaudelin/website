@@ -6,43 +6,33 @@
     <h2>How to reach me</h2>
     <div class="subtitle">If you want</div>
 
-    <div class="contact">
-        <form
-                action="https://audelin.us18.list-manage.com/subscribe/post?u=faf36037b68480d4074cafe92&amp;id=4a66e44c98&amp;f_id=003197e6f0"
-                target="_blank" method="POST" class="column"
-                id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
-            <label for="name">Your name<span>*</span></label>
-            <input name="FNAME" id="name" type="text" placeholder="Linus Torvald" required>
+    <form
+            action="https://audelin.us18.list-manage.com/subscribe/post?u=faf36037b68480d4074cafe92&amp;id=4a66e44c98&amp;f_id=003197e6f0"
+            target="_blank" method="POST" class="column"
+            id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form">
+        <label for="name">Your name<span>*</span></label>
+        <input name="FNAME" id="name" type="text" placeholder="Linus Torvald" required>
 
-            <label for="companyName">Your company</label>
-            <input name="LNAME" id="companyName" type="text" placeholder="JetBrains">
+        <label for="companyName">Your company</label>
+        <input name="LNAME" id="companyName" type="text" placeholder="JetBrains">
 
-            <label for="email">Your email<span>*</span></label>
-            <input name="EMAIL" id="email" type="email" placeholder="example@email.com" required>
+        <label for="email">Your email<span>*</span></label>
+        <input name="EMAIL" id="email" type="email" placeholder="example@email.com" required>
 
-            <label for="message">Your message<span>*</span></label>
-            <textarea name="NEED" id="message" placeholder="Doing great !" required/>
+        <label for="message">Your message<span>*</span></label>
+        <textarea name="NEED" id="message" placeholder="Doing great !" required/>
 
-            <div hidden=""><input type="hidden" name="tags" value="2976801"></div>
-            <div id="mce-responses" class="clear foot">
-                <div class="response" id="mce-error-response" style="display: none;"></div>
-                <div class="response" id="mce-success-response" style="display: none;"></div>
-            </div>
-            <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                /* real people should not fill this in and expect good things - do not remove this or risk form bot
-                signups */
-                <input type="text" name="b_faf36037b68480d4074cafe92_4a66e44c98" tabindex="-1" value="">
-            </div>
-
-            <button type="submit">Send</button>
-        </form>
-        <div class="column">
-            <a href="mailto:aurelien@audelin.com">Send me an email</a>
-            <a href="https://x.com">Find me on X</a>
-            <a href="https://linkedin.com">Find me on LinkedIn</a>
-            <a href="https://github.com">Find me on GitHub</a>
+        <div hidden=""><input type="hidden" name="tags" value="2976801"></div>
+        <div id="mce-responses" class="clear foot">
+            <div class="response" id="mce-error-response" style="display: none;"></div>
+            <div class="response" id="mce-success-response" style="display: none;"></div>
         </div>
-    </div>
+        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+            <input type="text" name="b_faf36037b68480d4074cafe92_4a66e44c98" tabindex="-1" value="">
+        </div>
+
+        <button type="submit">Send</button>
+    </form>
 
 </section>
 
@@ -70,24 +60,17 @@
         margin-bottom: 10vh;
     }
 
-    .contact {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 0 10vw;
-        gap: 60px;
-    }
-
-    .column {
+    form {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        min-width: 20vw;
+        min-width: 300px;
+        width: 40vw;
+        max-width: 600px;
     }
 
     input {
         padding: 10px 20px;
-        min-width: 200px;
         margin-bottom: 20px;
         border: none;
         border-radius: 10px;
@@ -115,7 +98,6 @@
     textarea {
         min-height: 80px;
         padding: 10px 20px;
-        min-width: 200px;
         margin-bottom: 20px;
         border: none;
         font-family: "Roboto", sans-serif;
