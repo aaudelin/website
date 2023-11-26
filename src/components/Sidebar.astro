@@ -1,9 +1,10 @@
 ---
+import MenuIcon from "./MenuIcon.astro";
+import Socials from "./Socials.astro";
+---
 
-import MenuIcon from "./MenuIcon.astro";---
-
-<MenuIcon />
-<div class="sidebar">
+<MenuIcon/>
+<div class="navbar">
     <nav>
         <ul>
             <li><a href="#about" class="active">Who am I</a></li>
@@ -11,17 +12,33 @@ import MenuIcon from "./MenuIcon.astro";---
             <li><a href="#why">Why me</a></li>
             <li><a href="#reachMe">How to reach me</a></li>
         </ul>
+        <div class="socials">
+            <Socials size="30"/>
+        </div>
     </nav>
+
 </div>
 
+
 <style>
+
+    nav {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+
+    .socials {
+        width: 110px;
+        margin-left: auto;
+    }
 
 
     .wrapper {
         position: sticky;
     }
 
-    .sidebar {
+    .navbar {
         padding: 5vh 10vw;
         position: sticky;
         top: 0;
@@ -29,6 +46,7 @@ import MenuIcon from "./MenuIcon.astro";---
         min-width: 200px;
         background-color: var(--accent-darker);
         z-index: 10;
+        align-items: center;
     }
 
     ul {
@@ -73,16 +91,24 @@ import MenuIcon from "./MenuIcon.astro";---
     }
 
 
-    @media (max-width: 750px) {
+    @media (max-width: 900px) {
         nav:not(.active-nav) {
             display: none;
+        }
+
+        .socials {
+            background-color: var(--accent-darker);
+            margin-left: 0;
+            padding-right: 100vw;
+            padding-left: 5px;
+            padding-top: 5px;
         }
 
         a::before {
             background-color: var(--accent-darker);
         }
 
-        .sidebar {
+        .navbar {
             width: 100%;
             margin: 0;
             padding: 0;
@@ -92,12 +118,14 @@ import MenuIcon from "./MenuIcon.astro";---
         }
 
         nav {
-            padding-left: 10px;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         ul {
             flex-direction: column;
             gap: 2px;
+            padding-left: 10px;
         }
 
         a {

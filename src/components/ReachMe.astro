@@ -1,10 +1,15 @@
 ---
-
+import Socials from "./Socials.astro";
 ---
 
 <section id="reachMe">
     <h2>How to reach me</h2>
     <div class="subtitle">If you want</div>
+
+
+    <div class="socials">
+        <Socials size="40"/>
+    </div>
 
     <form
             action="https://audelin.us18.list-manage.com/subscribe/post?u=faf36037b68480d4074cafe92&amp;id=4a66e44c98&amp;f_id=003197e6f0"
@@ -40,6 +45,11 @@
 
 
 <style>
+
+    .socials {
+        margin-bottom: 5vh;
+        width: 150px;
+    }
 
     section {
         display: flex;
