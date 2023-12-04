@@ -1,34 +1,93 @@
 ---
 import CareerItem from "./CareerItem.astro";
 import Tags from "./Tags.astro";
+
 ---
 <section id="career">
     <h2>What have I done</h2>
 
-    <CareerItem title="Architecte" company="Company" from="2019" to="today">
-        <div>Morbi nec ex vitae dui volutpat venenatis feugiat eu eros. Sed hendrerit, justo sit amet suscipit varius,
-            felis arcu egestas metus, non fermentum mauris enim sit amet quam. Sed in ante sit amet ex porta auctor.
-            Praesent euismod nibh erat, eu laoreet mauris ultricies vel. Ut at ultrices leo. Quisque mattis nisi purus,
-            vitae consequat nulla gravida id. Nulla eu fermentum elit, a elementum mi. Duis eu elementum orci, ut luctus
-            massa. Nunc at facilisis libero, ut dignissim felis. Cras ut orci commodo, ultricies mi ut, pharetra elit.
-            Nullam tellus sem, ultricies vel aliquam consectetur, bibendum quis nisl. Proin leo odio, interdum eu tempus
-            non, malesuada sed nisl. Duis mattis sed quam non fermentum. Cras feugiat sollicitudin magna, eget semper
-            nisl luctus a. Ut dolor purus, dapibus a rutrum eu, rhoncus in lacus. Etiam rutrum imperdiet purus a dictum.
-        </div>
+    <CareerItem title="CTO" company="Cleaq" from="2020">
+        <p>
+            Cleaq is french startup that I cofounded in 2020 that offers a new Device As A Services solution for SMBs.
+            Our goal was to simplify fleet management and help companies stop wasting time and stay focus on their business
+        </p>
+        <p>
+            To ease the customer experience we developed a Saas and I started as the only developer for the MVP.
+            When we found our product market fit I had to recruit the team and work towards our ambitious roadmap
+        </p>
+        <p>
+            As a CTO I had to make a lot of decisions to build a product that would serve the automation of our business
+            but that would also offer valuable features to our customers.
+            Since our business had a lot of complexity we had to connect the dots between all the tools we had
+        </p>
         <div>
-            <Tags labels={["Kotlin", "Typescript"]} />
+            <Tags labels={["business", "recruitment", "management", "roadmap", "lowcode", "automation"]} />
         </div>
     </CareerItem>
 
-    <CareerItem title="Front dev" company="Company" from="2018" to="today">
-        <div>Morbi nec ex vitae dui volutpat venenatis feugiat eu eros. Sed hendrerit, justo sit amet suscipit varius,
-            felis arcu egestas metus, non fermentum mauris enim sit amet quam. Sed in ante sit amet ex porta auctor.
-            Praesent euismod nibh erat, eu laoreet mauris ultricies vel. Ut at ultrices leo. Quisque mattis nisi purus,
-            vitae consequat nulla gravida id. Nulla eu fermentum elit, a elementum mi. Duis eu elementum orci, ut luctus
-            massa. Nunc at facilisis libero, ut dignissim felis. Cras ut orci commodo, ultricies mi ut, pharetra elit.
-            Nullam tellus sem, ultricies vel aliquam consectetur, bibendum quis nisl. Proin leo odio, interdum eu tempus
-            non, malesuada sed nisl. Duis mattis sed quam non fermentum. Cras feugiat sollicitudin magna, eget semper
-            nisl luctus a. Ut dolor purus, dapibus a rutrum eu, rhoncus in lacus. Etiam rutrum imperdiet purus a dictum.
+    <CareerItem title="Software Architect & Software Engineer" company="Axione" from="2019">
+        <div>
+            <p>
+                Axione is a french company that builds and operates telecom networks for local authorities and
+                businesses
+            </p>
+            <p>
+                The main project I worked for was dedicated to give customer information on their accessibility to internet.
+                With a 10 developers team we built the architecture, created the design and developed the solution.
+                I also enjoyed organizing courses and hackathons to improve the overall team's technical knowledge
+            </p>
+            <p>
+                As an architect I also contributed to the technical design of the new software solutions that
+                Axione was developing. I was also involved in the technical roadmap and the technical debt management
+            </p>
+            <div>
+                <Tags labels={["architecture", "kotlin", "technical debt", "spring boot", "technical debt", "react", "debezium"]} />
+            </div>
+        </div>
+    </CareerItem>
+
+    <CareerItem title="Lead Software Engineer" company="Tradelab" from="2018">
+        <div>
+            <p>
+                Tradelab is a french company that offers a programmatic advertising platform
+            </p>
+            <p>
+                As a lead software engineer I was in charge of the technical design of the new features and the
+                technical roadmap. I also had to manage the technical debt and the team's technical knowledge
+            </p>
+            <p>
+                Working at Tradelab taught me a lot about prioritizing and communicating. As a matter of fact, the product we built
+                was used internally to improve the efficiency of the media trader team so we had to build features that were
+                easy to use and reliable. We also had to communicate a lot with the whole team to make sure we were building the tool
+            </p>
+            <p>
+                Advertising is a business that needs a lot of data so we had to build fast and reliable data pipelines that
+                no matter the amount of inputs would take a decision in less than a second
+            </p>
+            <div>
+                <Tags labels={["product design", "api", "data"]} />
+            </div>
+        </div>
+    </CareerItem>
+
+    <CareerItem title="Software Engineer" company="Sopra Steria" from="2015">
+        <div>
+            <p>
+                Sopra Steria in a software development company that operates worldwide
+            </p>
+            <p>
+                As a software engineer I worked on a lot of different projects for different clients. But the biggest
+                project I worked on was for the french ministry of health. We built the first version of the french
+                digital book of health. This project was a huge challenge
+            </p>
+            <p>
+                I was amongst the first developers to work on this project so I had to build the architecture, contribute
+                to the main developments and was involved in every step of the project.
+                I also had to recruit and train new developers to join the team
+            </p>
+            <div>
+                <Tags labels={["architecture", "development", "spring boot", "testing"]} />
+            </div>
         </div>
     </CareerItem>
 </section>
