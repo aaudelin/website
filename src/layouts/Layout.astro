@@ -10,22 +10,21 @@ const {title} = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="description" content="Astro description">
-    <meta name="viewport" content="width=device-width"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-    <meta name="generator" content={Astro.generator}/>
-    <title>{title}</title>
-
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0Y5C5CRGX1"></script>
-    <script  is:inline>
+    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-0Y5C5CRGX1"></script>
+    <script type="text/partytown">
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-0Y5C5CRGX1');
     </script>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Astro description">
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title}</title>
 </head>
 <body>
 <div class="wrapper">
