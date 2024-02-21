@@ -24,7 +24,7 @@ const delay = daysBetween(baseDate, newDate);
 <div>
     Nombre de jours sans victoire
 </div>
-<div>{delay}</div>
+<div id="delay" data-delay={delay}>{delay}</div>
 </body>
 </html>
 
@@ -40,9 +40,12 @@ const delay = daysBetween(baseDate, newDate);
     // Import npm modules.
     import confetti from 'canvas-confetti';
 
-    setInterval(() => {
-        confetti();
-    }, 1000);
+    const delay = document.getElementById('delay').getAttribute('data-delay')
 
+    if (delay === "0") {
+        setInterval(() => {
+            confetti();
+        }, 1500);
+    }
 </script>
 
